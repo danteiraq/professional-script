@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سكربت محترف عالمي</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #eee;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    #loading-screen {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      color: #00ff00;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    #loading-screen img {
+      max-width: 300px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00ff00;
+    }
+    h1 {
+      margin: 30px 0 15px 0;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #00ff00;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 22px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      color: #000;
+      box-shadow: 0 0 8px #00ff00aa;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    button:hover {
+      background-color: #00cc00;
+      color: #fff;
+      box-shadow: 0 0 15px #00ff00;
+    }
+    #output {
+      background: #222;
+      border-radius: 8px;
+      padding: 15px;
+      width: 90%;
+      max-width: 700px;
+      min-height: 150px;
+      font-family: monospace;
+      font-size: 1rem;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      box-shadow: 0 0 10px #00ff00aa inset;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loading-screen">
+    <img src="https://iili.io/FGZrHUF.png" alt="شعار السكربت" />
+    جاري تشغيل السكربت<br />
+    <small>تحياتي المطور Vergil</small>
+  </div>
+
+  <h1>سكربت سرقة العربي - النسخة المحترفة</h1>
+
+  <div class="buttons">
+    <button id="btn-steal">🔓 سرقة سريع وفعال</button>
+    <button id="btn-optimize">🚬 تحسين الفريمات</button>
+    <button id="btn-track-shop">⚡ تتبع الشوب</button>
+    <button id="btn-strong-server">🔚 نقل لسيرفر أقوى</button>
+  </div>
+
+  <pre id="output"></pre>
+
+  <script>
+    const loadingScreen = document.getElementById('loading-screen');
+    const output = document.getElementById('output');
+
+    // إخفاء شاشة التحميل بعد 3 ثواني
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 3000);
+
+    // دوال الأزرار (تقدر تطورها لاحقًا)
+    document.getElementById('btn-steal').onclick = () => {
+      log("تم تفعيل زر السرقة السريع ✅");
+      // أضف كود السرقة هنا
+    };
+    document.getElementById('btn-optimize').onclick = () => {
+      log("تم تفعيل تحسين الفريمات 🚀");
+      // أضف كود تحسين الأداء هنا
+    };
+    document.getElementById('btn-track-shop').onclick = () => {
+      log("جارٍ تتبع الشوب تلقائيًا ⚡");
+      // أضف كود تتبع الشوب هنا
+    };
+    document.getElementById('btn-strong-server').onclick = () => {
+      log("تم النقل إلى سيرفر أقوى 🔚");
+      // أضف كود النقل للسيرفر القوي هنا
+    };
+
+    // دالة لعرض النص في صندوق المخرجات
+    function log(message) {
+      const timestamp = new Date().toLocaleTimeString();
+      output.textContent += `[${timestamp}] ${message}\n`;
+      output.scrollTop = output.scrollHeight;
+    }
+  </script>
+</body>
+</html>
